@@ -67,12 +67,40 @@ textarea {
 .incoming {
   background-color: #8f8be8;
   color: #fff;
+  animation-name: slide-left;
+  animation-duration: 0.2s;
 }
 
 .outgoing {
   background-color: #e9eafd;
   color: #787986;
   margin-left: auto;
+  animation-name: slide-right;
+  animation-duration: 0.2s;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .message h4 {
